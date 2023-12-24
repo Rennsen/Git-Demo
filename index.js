@@ -56,7 +56,7 @@ const main = async () => {
   console.log(encrypted);
   console.log('------ copy above ------');
   console.log(
-    '😍 \x20 Copy the encrypted address to stickers/<your-github-username>.txt and send a pull request'
+    '😍 \x20 Copy the encrypted address to images/<your-github-username>.txt and send a pull request'
   );
 };
 
