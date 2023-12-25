@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "address": "^2.0.1",
     "fs-extra": "^7.0.0",
     "inquirer": "^6.5.2",
     "node-rsa": "^1.0.1",
