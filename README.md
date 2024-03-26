@@ -1,5 +1,3 @@
-Here's the rearranged README with adjusted title sizes:
-
 # GitHub Collaboration and Version Control Application (GitDemo)
 
 Welcome to our GitHub Collaboration and Version Control Application project! This project is designed to provide hands-on experience with fundamental concepts of Git version control and collaboration, while also incorporating encryption techniques using RSA methods.
