@@ -42,7 +42,7 @@ We value your feedback! If you encounter any issues or have suggestions for enha
 
 ### License
 
-This project is licensed under the [MIT License](link-to-license-file). Feel free to use, modify, and distribute it as per the terms of the license.
+This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the terms of the license.
 
 ### Disclaimer
 
@@ -54,6 +54,6 @@ For any inquiries or further assistance, you can contact the project owner:
 
 - **Name**: Rayan Derradji
 - **Email**: nr_derradji@esi.dz
-- **GitHub**: Rennsen
+- **GitHub**: [Rennsen](https://github.com/Rennsen)
 
 Thank you for using our GitHub Collaboration and Version Control Application! We hope you find it both educational and practical. Happy collaborating! 🚀
