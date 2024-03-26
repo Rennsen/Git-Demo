@@ -1,12 +1,14 @@
-**GitHub Collaboration and Version Control Application (GitDemo)**
+Here's the rearranged README with adjusted title sizes:
+
+# GitHub Collaboration and Version Control Application (GitDemo)
 
 Welcome to our GitHub Collaboration and Version Control Application project! This project is designed to provide hands-on experience with fundamental concepts of Git version control and collaboration, while also incorporating encryption techniques using RSA methods.
 
-### Purpose
+## Purpose
 
 The primary goal of this project is to help users understand the workflow of version control systems like Git and learn about collaborative development practices. Additionally, it introduces encryption principles through RSA encryption, offering a practical application of cryptographic techniques.
 
-### Features
+## Features
 
 - **User Authentication**: Users can enter their personal GitHub account information securely within the application.
 - **Key Generation**: The application generates a public key for the user, which they commit and push to the project repository.
@@ -14,7 +16,7 @@ The primary goal of this project is to help users understand the workflow of ver
 - **Decryption**: The project owner, possessing the private key, can decrypt the encrypted information.
 - **Email Notification**: Upon successful decryption, the user receives a success image sent to their email.
 
-### How to Use
+## How to Use
 
 1. **Clone the Repository**: Begin by cloning this repository to your local machine using the following command:
 
@@ -32,23 +34,23 @@ The primary goal of this project is to help users understand the workflow of ver
 
 6. **Email Notification**: Upon successful decryption, you will receive a success image sent to your email address.
 
-### Contributions
+## Contributions
 
 Contributions to this project are welcome! If you have ideas for improvements or new features, feel free to open an issue or submit a pull request. Please follow our contribution guidelines outlined in the project's documentation.
 
-### Feedback
+## Feedback
 
 We value your feedback! If you encounter any issues or have suggestions for enhancements, please don't hesitate to reach out by opening an issue or contacting the project maintainers directly.
 
-### License
+## License
 
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the terms of the license.
 
-### Disclaimer
+## Disclaimer
 
 Please note that this project is intended for educational purposes only. While efforts have been made to ensure security, it is essential to exercise caution when dealing with sensitive information and encryption methods.
 
-### Contact
+## Contact
 
 For any inquiries or further assistance, you can contact the project owner:
 
