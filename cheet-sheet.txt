@@ -1,0 +1,125 @@
+/*Git*/
+
+git init : to initialize git in the selected folder
+
+git status :  all the status of the folder (branches,unstaged changes,staged changes.....)
+
+git add files/directories : to stage the changes
+
+git config --global user.name "write-username"
+git config --global user.email "write-email"
+
+git commit -m "commit name" : to commit the staged changes
+or git commit to write a longer description
+
+adding --amend : to add staged changes to the last commit not a new one
+
+git log : to see the commits history (q to quit)
+
+git reset files or git checkout -- files/directories : to unstage staged changes
+
+git checkout commit_hash : to move between versions or git checkout branch_name to go the latest commit in that branch
+
+in this case git log will show only the head commit and all the commits before it not those that are after it,
+to show them all we type git log --all
+* head is the commit that our working branch is on
+
+now when you go to previeus versions and starts doing new commits git will branch 
+ example : version 1 -->version 2 -->version 3
+                    \-->version 2 updated
+to view this branching we use git log --all --graph
+to prevent this effect of branching we can do the following
+      -don't move directly to a previeus version
+      -but restore the changes in the actuale commit
+      -with the command git checkout commit_hash files/directories
+      -the restored changes will be staged and not commited 
+    
+to create a shotcut for a command (alias) : git config --global alias.shortcut "word"
+  example : git config --global alias.s "status" so we can type git s instead of git status 
+
+to ignore serten files from being tracked we type there names inside the file .gitignore situated in the git root directory
+inside .gitignore :
+   lines starting with # are comments
+   you can use *.txt to ignore all .txt files
+   you can use paths /
+   you can use ! to negate
+
+to remove git rm -rf .git
+
+/*Github*/
+
+to set an online backup to your git repository
+
+1-first we create a new github repository 
+
+2-then we link the local repository with the github one by :
+   git remote add name url (the conviention name is origin)
+to see info about linked repo use git remote or git remote -v for more info
+to remove the link do git remote remove link-name
+
+upload to github = push
+download from github = pull
+
+3-configure git with our github user name 
+   git config --global credential.username "username"
+
+4-then push the code or after (for any **commited** changes) with: git push link-name branch-to-push 
+    example git push origin master 
+
+to set a shortcut to that command we use  git push origin master --set-upstream
+next time you can write git push instead
+
+if the master and origin are on different branches (it may happen when overwriting the commits "--amend") when you type git push it won't work only if you force it by -f because the origine branche will get overwitten.
+
+to download a github repository to your computer type : git clone repo-url [folder-name]
+
+git fetch : to get the origin current state
+
+git pull link-name branch-to-pull (--set-upstream to git pull)
+
+/*branching and merging*/
+
+how to create a new branch in git : 
+   git branch branch-name (add -D to delete one)
+this will create a new branch which will be sync with the main branch at first
+
+all the git command works for the master branch (add,commit ...)
+to suitch the working branch we use the command :
+   git checkout branch-name
+
+how to merge two branches : 
+   git merge branch-to-merge -m "commit-name"
+this will merge the working branch with the listed branch in the command
+as a new commit on top of the working branch commits
+
+to resolve a conflict after merging just choose which change to take in the code
+then commit it to finish the merging
+
+/*Feature branch workflow*/ (how to manage branches with github)
+
+1-create your feature branch
+
+2-upload this branch to github:
+    switch to the branch : git checkout branch-name
+    push it to github : git push origine branch-name
+    
+3-now in gethub :
+  create a pull request (code review before merging)
+
+  after the review merge the two branches (merge pull request)
+
+4-after that sync the changes in your remote repo :
+   git fetch
+   git pull origine master 
+
+to resolve a merge conflict between two pull request on two branches other then master
+    on github just choose which chnage to take in the code in the web-editor
+    on git (local computer) :
+      update the origin (to update merging the feature1) by git pull origine master
+      then go to feature2 and merge it with master
+      then it is same as line 94 or 115 but on your local code editor then commit and push
+
+/*git rebase*/
+   
+in the feature branch type git rebase master to move the feature branch to the last commit pulled from master (it will branch from that last commit)
+then in master type git rebase feature to move the redirected feature branch on top of master then push
